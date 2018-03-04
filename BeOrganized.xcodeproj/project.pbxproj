@@ -12,11 +12,14 @@
 		687BD2F420495D8A00E8E77F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687BD2F220495D8A00E8E77F /* Main.storyboard */; };
 		687BD2F620495D8A00E8E77F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687BD2F520495D8A00E8E77F /* Assets.xcassets */; };
 		687BD2F920495D8A00E8E77F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687BD2F720495D8A00E8E77F /* LaunchScreen.storyboard */; };
-		687BD32B204A50A500E8E77F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 687BD329204A50A500E8E77F /* DataModel.xcdatamodeld */; };
 		687BD32D204AF8F600E8E77F /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687BD32C204AF8F600E8E77F /* CategoryTableViewController.swift */; };
+		687BD32F204B80E600E8E77F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687BD32E204B80E600E8E77F /* Item.swift */; };
+		687BD331204B80FD00E8E77F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687BD330204B80FD00E8E77F /* Category.swift */; };
+		EDD8324C97C2C169DDC24F25 /* Pods_BeOrganized.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B21E4689FBC6BF6F5A0BBED /* Pods_BeOrganized.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2180C07F34AA17827EA66AAD /* Pods-BeOrganized.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeOrganized.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeOrganized/Pods-BeOrganized.release.xcconfig"; sourceTree = "<group>"; };
 		687BD2EB20495D8A00E8E77F /* BeOrganized.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeOrganized.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		687BD2EE20495D8A00E8E77F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		687BD2F020495D8A00E8E77F /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
@@ -24,8 +27,11 @@
 		687BD2F520495D8A00E8E77F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687BD2F820495D8A00E8E77F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		687BD2FA20495D8A00E8E77F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		687BD32A204A50A500E8E77F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		687BD32C204AF8F600E8E77F /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		687BD32E204B80E600E8E77F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		687BD330204B80FD00E8E77F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		9B21E4689FBC6BF6F5A0BBED /* Pods_BeOrganized.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeOrganized.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52959F342AA03C9A660EFE5 /* Pods-BeOrganized.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeOrganized.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeOrganized/Pods-BeOrganized.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD8324C97C2C169DDC24F25 /* Pods_BeOrganized.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DEC97501CC1FFD325352DCC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B52959F342AA03C9A660EFE5 /* Pods-BeOrganized.debug.xcconfig */,
+				2180C07F34AA17827EA66AAD /* Pods-BeOrganized.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		687BD2E220495D8A00E8E77F = {
 			isa = PBXGroup;
 			children = (
 				687BD2ED20495D8A00E8E77F /* BeOrganized */,
 				687BD2EC20495D8A00E8E77F /* Products */,
+				1DEC97501CC1FFD325352DCC /* Pods */,
+				6AD652F7255BFC9A90A53F85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,7 +98,8 @@
 		687BD305204A1E8D00E8E77F /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				687BD329204A50A500E8E77F /* DataModel.xcdatamodeld */,
+				687BD330204B80FD00E8E77F /* Category.swift */,
+				687BD32E204B80E600E8E77F /* Item.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -102,6 +121,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6AD652F7255BFC9A90A53F85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B21E4689FBC6BF6F5A0BBED /* Pods_BeOrganized.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 687BD2FD20495D8A00E8E77F /* Build configuration list for PBXNativeTarget "BeOrganized" */;
 			buildPhases = (
+				CFA3A14625E750CC364CF1DF /* [CP] Check Pods Manifest.lock */,
 				687BD2E720495D8A00E8E77F /* Sources */,
 				687BD2E820495D8A00E8E77F /* Frameworks */,
 				687BD2E920495D8A00E8E77F /* Resources */,
+				D09786403F2584C5F17B8B9E /* [CP] Embed Pods Frameworks */,
+				AB38D4E619910739D3C47925 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,15 +199,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AB38D4E619910739D3C47925 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeOrganized/Pods-BeOrganized-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFA3A14625E750CC364CF1DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeOrganized-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D09786403F2584C5F17B8B9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BeOrganized/Pods-BeOrganized-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeOrganized/Pods-BeOrganized-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		687BD2E720495D8A00E8E77F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				687BD32F204B80E600E8E77F /* Item.swift in Sources */,
 				687BD2F120495D8A00E8E77F /* TodoListViewController.swift in Sources */,
-				687BD32B204A50A500E8E77F /* DataModel.xcdatamodeld in Sources */,
 				687BD2EF20495D8A00E8E77F /* AppDelegate.swift in Sources */,
 				687BD32D204AF8F600E8E77F /* CategoryTableViewController.swift in Sources */,
+				687BD331204B80FD00E8E77F /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +399,7 @@
 		};
 		687BD2FE20495D8A00E8E77F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B52959F342AA03C9A660EFE5 /* Pods-BeOrganized.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -326,6 +414,7 @@
 		};
 		687BD2FF20495D8A00E8E77F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2180C07F34AA17827EA66AAD /* Pods-BeOrganized.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -360,19 +449,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		687BD329204A50A500E8E77F /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				687BD32A204A50A500E8E77F /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 687BD32A204A50A500E8E77F /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 687BD2E320495D8A00E8E77F /* Project object */;
 }
